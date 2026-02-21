@@ -1,0 +1,49 @@
+# =============================================================================
+# Resume Screening Using NLP — Project Configuration
+# =============================================================================
+
+project:
+  name: "Resume Screening Using NLP"
+  version: "1.0.0"
+  description: "A system to screen and rank resumes based on job descriptions using NLP"
+
+# --- Data Paths ---
+data:
+  raw:
+    resumes: "data/raw/resumes/"
+    jobs: "data/raw/jobs/"
+  processed: "data/processed/"
+  embeddings: "data/embeddings/"
+
+# --- Model Configuration ---
+model:
+  embedding_model: "all-MiniLM-L6-v2"  # Sentence Transformer model
+  max_seq_length: 512
+  batch_size: 32
+
+# --- Preprocessing ---
+preprocessing:
+  remove_html: true
+  lowercase: true
+  remove_stopwords: true
+  lemmatize: true
+  min_word_length: 2
+  max_features: 10000  # TF-IDF max features
+
+# --- Similarity / Matching ---
+matching:
+  method: "cosine"  # cosine | classification
+  top_k: 10  # Number of top-ranked resumes to return
+  similarity_threshold: 0.5
+
+# --- Training ---
+training:
+  test_size: 0.2
+  random_state: 42
+  cv_folds: 5
+
+# --- Streamlit App ---
+app:
+  title: "Resume Screening System"
+  max_upload_size_mb: 10
+  allowed_extensions: [".pdf", ".docx", ".txt"]

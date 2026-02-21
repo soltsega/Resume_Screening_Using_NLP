@@ -1,0 +1,70 @@
+# =============================================================================
+# Resume Screening Using NLP — .gitignore
+# =============================================================================
+
+# --- Virtual Environment ---
+venv/
+env/
+.venv/
+.env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# --- Data (too large for Git) ---
+data/raw/
+data/processed/
+data/embeddings/
+*.csv
+*.json
+*.pkl
+*.parquet
+*.h5
+
+# --- Models (too large for Git) ---
+models/
+*.pt
+*.pth
+*.bin
+*.onnx
+*.joblib
+
+# --- Jupyter Notebook Checkpoints ---
+.ipynb_checkpoints/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs & Reports ---
+*.log
+reports/figures/*.png
+reports/figures/*.jpg
+
+# --- Kaggle ---
+kaggle.json
+
+# --- Streamlit ---
+.streamlit/
+Documentation/Semantic_Resume_Architect.pdf
+Documentation/Semantic_Resume_Ranking.pdf
+Documentation/Project_Understanding.md
+src/evaluation/metrics.py
+src/utils/helpers.py
+src/features/embeddings.py
+src/data/preprocessor.py
+src/data/loader.py
