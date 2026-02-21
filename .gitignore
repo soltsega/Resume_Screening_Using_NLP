@@ -68,3 +68,5 @@ src/utils/helpers.py
 src/features/embeddings.py
 src/data/preprocessor.py
 src/data/loader.py
+download_datasets.py
+verify_data.py
