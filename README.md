@@ -2,7 +2,7 @@
 
 An end-to-end NLP project that categorizes resumes into 25 industry segments and ranks candidates against Job Descriptions (JDs) using neural semantic matching.
 
-## 🚀 Key Features
+## Key Features
 - **Intelligent Classification**: Automatically classifies resumes (PDF/TXT) with **75.25% accuracy**.
 - **Semantic Matching**: Ranks candidates based on semantic meaning using **Cosine Similarity**, not just keyword matches.
 - **Hybrid NLP Pipeline**: Fuses **TF-IDF** (keyword importance) with **Dense Embeddings** (contextual understanding).
@@ -25,14 +25,14 @@ Resume_Screening_Using_NLP/
 └── Documentation/           # Detailed phase-by-phase reports
 ```
 
-## 💻 Tech Stack
+## Tech Stack
 - **Languages**: Python 3.11
 - **Preprocessing**: NLTK, Regex
 - **Feature Engineering**: Scikit-Learn (TF-IDF), Sentence-Transformers (Neural)
 - **Modeling**: Hybrid SGD Classifier (Linear SVM with Hinge Loss)
 - **UI/UX**: Streamlit, Plotly, Seaborn
 
-## 🏃‍♂️ How to Run
+## How to Run
 
 ### 1. Prerequisites
 Ensure you have the dependencies installed:
@@ -50,11 +50,12 @@ streamlit run src/app/main.py
 - **Tab 1 (Candidate Matching)**: Paste a Job Description to rank the existing resume database.
 - **Tab 2 (Resume Classifier)**: Upload a single resume to predict its industry category instantly.
 
-## 📊 Performance
+## Performance
 | Model | Accuracy | Weighted F1-Score |
 | :--- | :--- | :--- |
 | **Hybrid SGD (Final)** | **75.25%** | **0.74** |
 | Random Forest (Baseline) | 72.03% | 0.70 |
 
 ---
-*Developed for the Resume Screening Using NLP Course Project.*
+## Streamlit Dashboard
+
