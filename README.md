@@ -1,5 +1,7 @@
 # AI-Powered Resume Screening & Ranking System
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://soltsega-resume-screening-using-nlp-srcappmain-phase-vii-ec3qps.streamlit.app/)
+
 An end-to-end NLP project that categorizes resumes into 25 industry segments and ranks candidates against Job Descriptions (JDs) using neural semantic matching.
 
 ## Key Features
@@ -45,6 +47,8 @@ Run the following command from the project root:
 ```bash
 streamlit run src/app/main.py
 ```
+Once launched, the dashboard will be available at:  
+👉 **[http://localhost:8501](http://localhost:8501)**
 
 ### 3. Using the App
 - **Tab 1 (Candidate Matching)**: Paste a Job Description to rank the existing resume database.
@@ -57,5 +61,5 @@ streamlit run src/app/main.py
 | Random Forest (Baseline) | 72.03% | 0.70 |
 
 ---
-## Streamlit Dashboard
+
 
