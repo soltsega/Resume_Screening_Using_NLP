@@ -13,18 +13,26 @@ class ResumeMatcher:
                  processed_data_path="data/processed/resumes_cleaned.csv"):
         
         print("Initializing Semantic Matcher...")
+        # Resolve paths relative to the project root
+        self.root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
+        
+        abs_model_path = os.path.join(self.root, model_path)
+        abs_scaler_path = os.path.join(self.root, scaler_path)
+        abs_embeddings_path = os.path.join(self.root, embeddings_path)
+        abs_processed_data_path = os.path.join(self.root, processed_data_path)
+
         # Load necessary artifacts
         self.st_model = SentenceTransformer('all-MiniLM-L6-v2')
-        self.scaler = joblib.load(scaler_path)
+        self.scaler = joblib.load(abs_scaler_path)
         
         # Load pre-computed resume embeddings
-        if os.path.exists(embeddings_path):
-            self.resume_embeddings = np.load(embeddings_path)
+        if os.path.exists(abs_embeddings_path):
+            self.resume_embeddings = np.load(abs_embeddings_path)
         else:
-            raise FileNotFoundError(f"Resume embeddings not found at {embeddings_path}. Please run feature engineering first.")
+            raise FileNotFoundError(f"Resume embeddings not found at {abs_embeddings_path}. Please check your data directory.")
             
         # Load processed data for mapping results
-        self.df = pd.read_csv(processed_data_path)
+        self.df = pd.read_csv(abs_processed_data_path)
         
     def match(self, job_description, top_k=5):
         """
