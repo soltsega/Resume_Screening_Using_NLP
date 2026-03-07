@@ -24,12 +24,10 @@ data/processed/
 data/embeddings/
 *.csv
 *.json
-*.pkl
 *.parquet
 *.h5
 
 # --- Models (too large for Git) ---
-models/
 *.pt
 *.pth
 *.bin
@@ -72,3 +70,16 @@ download_datasets.py
 verify_data.py
 Documentation/TODO_Implementation_Roadmap.md
 src/visualization/run_eda.py
+src/models/train_baselines.py
+src/models/optimize_model.py
+src/models/similarity.py
+src/models/optimize_model_v2.py
+src/models/classifier.py
+src/models/boost_performance.py
+models/full_training_log_utf8.txt
+models/baseline_results.txt
+models/full_training_log.txt
+src/models/__init__.py
+models/label_encoder.pkl
+models/scaler.pkl
+models/tfidf_vectorizer.pkl
