@@ -81,4 +81,3 @@ models/baseline_results.txt
 models/full_training_log.txt
 src/models/__init__.py
 models/label_encoder.pkl
-models/tfidf_vectorizer.pkl
